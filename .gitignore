@@ -14,6 +14,9 @@
 library/
 include/
 
+# DICOM images
+dicom_data/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
