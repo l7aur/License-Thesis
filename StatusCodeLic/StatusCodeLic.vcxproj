@@ -144,6 +144,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Series.cpp" />
+    <ClCompile Include="Slice.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Series.hpp" />
+    <ClInclude Include="Slice.hpp" />
+    <ClInclude Include="Warnings.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,10 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\IMAGE PREPROCESSING">
+      <UniqueIdentifier>{d9fbf4da-9b94-49bd-b961-e22048959346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IMAGE PREPROCESSING">
+      <UniqueIdentifier>{ab32face-85a1-49ca-91c7-62252b67270e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MESSAGES">
+      <UniqueIdentifier>{18d81987-fb55-480d-98ef-a03db3f2d872}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Slice.cpp">
+      <Filter>Source Files\IMAGE PREPROCESSING</Filter>
+    </ClCompile>
+    <ClCompile Include="Series.cpp">
+      <Filter>Source Files\IMAGE PREPROCESSING</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Slice.hpp">
+      <Filter>Header Files\IMAGE PREPROCESSING</Filter>
+    </ClInclude>
+    <ClInclude Include="Series.hpp">
+      <Filter>Header Files\IMAGE PREPROCESSING</Filter>
+    </ClInclude>
+    <ClInclude Include="Warnings.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
