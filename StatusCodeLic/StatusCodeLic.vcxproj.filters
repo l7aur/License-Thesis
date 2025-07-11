@@ -13,14 +13,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\IMAGE PREPROCESSING">
-      <UniqueIdentifier>{d9fbf4da-9b94-49bd-b961-e22048959346}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\IMAGE PREPROCESSING">
-      <UniqueIdentifier>{ab32face-85a1-49ca-91c7-62252b67270e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\MESSAGES">
       <UniqueIdentifier>{18d81987-fb55-480d-98ef-a03db3f2d872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DATA STRUCTURES">
+      <UniqueIdentifier>{a13da81d-a682-4308-8c87-9e5597ca0ff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PROCESSING 1">
+      <UniqueIdentifier>{f6d6a8c5-8fec-4ef3-9c0d-fbc010ce500a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PROCESSING 2">
+      <UniqueIdentifier>{bba60dfa-3480-4cd1-8d20-dee22ed13583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PROCESSING 3">
+      <UniqueIdentifier>{56d80552-ed18-4fab-858a-16b2f2281e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PROCESSING 1">
+      <UniqueIdentifier>{f89fd07e-10dc-4b3e-98cf-48f7151fa852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PROCESSING 2">
+      <UniqueIdentifier>{c2afb705-1d93-4ddf-9548-d0eef21e1a27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PROCESSING 3">
+      <UniqueIdentifier>{74d1f8f4-bfb1-4627-81d6-7003193b10e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PREPROCESSING">
+      <UniqueIdentifier>{d9fbf4da-9b94-49bd-b961-e22048959346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PREPROCESSING">
+      <UniqueIdentifier>{ab32face-85a1-49ca-91c7-62252b67270e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,21 +49,30 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Slice.cpp">
-      <Filter>Source Files\IMAGE PREPROCESSING</Filter>
+      <Filter>Source Files\PREPROCESSING</Filter>
     </ClCompile>
     <ClCompile Include="Series.cpp">
-      <Filter>Source Files\IMAGE PREPROCESSING</Filter>
+      <Filter>Source Files\PREPROCESSING</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Slice.hpp">
-      <Filter>Header Files\IMAGE PREPROCESSING</Filter>
+      <Filter>Header Files\PREPROCESSING</Filter>
     </ClInclude>
     <ClInclude Include="Series.hpp">
-      <Filter>Header Files\IMAGE PREPROCESSING</Filter>
+      <Filter>Header Files\PREPROCESSING</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_safe_queue.hpp">
+      <Filter>Header Files\DATA STRUCTURES</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_joiner.hpp">
+      <Filter>Header Files\DATA STRUCTURES</Filter>
     </ClInclude>
     <ClInclude Include="Warnings.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\MESSAGES</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_pool.hpp">
+      <Filter>Header Files\DATA STRUCTURES</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

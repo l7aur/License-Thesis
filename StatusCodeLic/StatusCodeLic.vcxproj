@@ -150,6 +150,9 @@
   <ItemGroup>
     <ClInclude Include="Series.hpp" />
     <ClInclude Include="Slice.hpp" />
+    <ClInclude Include="thread_joiner.hpp" />
+    <ClInclude Include="thread_pool.hpp" />
+    <ClInclude Include="thread_safe_queue.hpp" />
     <ClInclude Include="Warnings.hpp" />
   </ItemGroup>
   <ItemGroup>
