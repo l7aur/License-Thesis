@@ -148,6 +148,7 @@
     <ClCompile Include="Slice.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SeriesBuilder.hpp" />
     <ClInclude Include="Slice.hpp" />
     <ClInclude Include="thread_joiner.hpp" />
@@ -157,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="StatusCodeLic.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
