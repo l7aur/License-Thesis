@@ -1,12 +1,11 @@
 #include "SeriesBuilder.hpp"
 #include "Slice.hpp"
-
 #include <filesystem>
 
 using namespace std::chrono_literals;
 
-SeriesBuilder::SeriesBuilder(const std::string& path)
-	: b{ getNumberOfWorkers() + 1 }
+SeriesBuilder::SeriesBuilder(const std::string& path) 
+	: threadBarrier{ getNumberOfWorkers() + 1 }
 {
 	size_t numberOfFiles = 0;
 	for (const auto& entry : std::filesystem::directory_iterator(path)) 
@@ -24,17 +23,17 @@ SeriesBuilder::SeriesBuilder(const std::string& path)
 
 SeriesBuilder::~SeriesBuilder()
 {
-	for (auto& slice : series)
+	for (const auto& slice : series)
 		delete slice;
 }
 
 void SeriesBuilder::worker_thread() {
 	thread_pool::worker_thread();
-	b.arrive_and_wait();
+	threadBarrier.arrive_and_wait();
 }
 
 void SeriesBuilder::waitForFinish() {
 	while (!work_q.empty());
 	isDone = true;
-	b.arrive_and_wait();
+	threadBarrier.arrive_and_wait();
 }

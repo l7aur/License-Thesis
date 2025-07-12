@@ -21,6 +21,7 @@ public:
 	MUST_USE_VALUE_ATTR const size_t getNumberOfColumns() const { return img->getWidth(); }
 	MUST_USE_VALUE_ATTR const uint16_t* const getPixelData() const { return static_cast<const uint16_t*>(img->getOutputData(sizeof(uint16_t) * 8)); }
 	MUST_USE_VALUE_ATTR const std::pair<float, float> getPixelSpacingX() const { return pixelSpacing; }
+
 private:
 	const std::string fileName{ "" };
 	std::unique_ptr<DicomImage> img{ nullptr };

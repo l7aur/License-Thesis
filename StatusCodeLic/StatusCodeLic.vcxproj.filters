@@ -54,6 +54,12 @@
     <ClCompile Include="SeriesBuilder.cpp">
       <Filter>Source Files\PREPROCESSING</Filter>
     </ClCompile>
+    <ClCompile Include="EdgeSet.cpp">
+      <Filter>Source Files\PROCESSING 1</Filter>
+    </ClCompile>
+    <ClCompile Include="EdgeExtractor.cpp">
+      <Filter>Source Files\PROCESSING 1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Slice.hpp">
@@ -76,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EdgeSet.hpp">
+      <Filter>Header Files\PROCESSING 1</Filter>
+    </ClInclude>
+    <ClInclude Include="EdgeExtractor.hpp">
+      <Filter>Header Files\PROCESSING 1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

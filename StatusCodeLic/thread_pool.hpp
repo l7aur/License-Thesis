@@ -8,7 +8,7 @@
 
 class thread_pool {
 public:
-	thread_pool()
+	thread_pool() noexcept(false)
 		: isDone{ false }, joiner{ threads } {
 		unsigned const threadCount = std::thread::hardware_concurrency() / 2;
 		try {

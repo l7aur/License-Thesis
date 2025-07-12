@@ -6,19 +6,18 @@
 #include "thread_pool.hpp"
 
 class Slice;
-using Series = std::vector<Slice*>;
 
 class SeriesBuilder : protected thread_pool
 {
 public:
-	SeriesBuilder(const std::string& path);
+	SeriesBuilder(const std::string& path) noexcept(false);
 	~SeriesBuilder();
 
 	void worker_thread() override;
 	void waitForFinish();
 
 private:
-	Series series;
-	std::barrier<> b;
+	std::vector<Slice*> series;
+	std::barrier<> threadBarrier;
 };
 

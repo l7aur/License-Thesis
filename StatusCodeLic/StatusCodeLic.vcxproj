@@ -143,11 +143,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EdgeExtractor.cpp" />
+    <ClCompile Include="EdgeSet.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SeriesBuilder.cpp" />
     <ClCompile Include="Slice.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EdgeExtractor.hpp" />
+    <ClInclude Include="EdgeSet.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SeriesBuilder.hpp" />
     <ClInclude Include="Slice.hpp" />
