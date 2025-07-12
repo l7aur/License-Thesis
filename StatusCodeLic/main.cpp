@@ -10,7 +10,6 @@ int main() {
 	PROCESSING 2: generate points
 	PROCESSING 3: generate mesh
 	*/
-	// good feature: between pipeline checkpoints, i.e. save files as binary/txt
 
 	//Series mySeries{"../dicom_data/CT2"};
 

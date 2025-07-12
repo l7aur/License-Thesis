@@ -2,16 +2,17 @@
 
 class Slice;
 
-#include <list>
+#include <vector>
 #include <string>
+#include "thread_pool.hpp"
 
-class Series
+class Series : private thread_pool<Slice*>
 {
 public:
 	Series(const std::string& path);
 	~Series();
 
 private:
-	std::list<Slice*> slices;
+	std::vector<Slice*> slices;
 };
 
