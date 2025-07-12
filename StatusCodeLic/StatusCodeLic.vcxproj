@@ -144,11 +144,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Series.cpp" />
+    <ClCompile Include="SeriesBuilder.cpp" />
     <ClCompile Include="Slice.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Series.hpp" />
+    <ClInclude Include="SeriesBuilder.hpp" />
     <ClInclude Include="Slice.hpp" />
     <ClInclude Include="thread_joiner.hpp" />
     <ClInclude Include="thread_pool.hpp" />

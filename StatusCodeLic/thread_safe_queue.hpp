@@ -23,7 +23,7 @@ public:
 		data_q.pop();
 	}
 
-	std::shared_ptr<L> waint_and_pop() {
+	std::shared_ptr<L> wait_and_pop() {
 		std::unique_lock<std::mutex> lk(mtx);
 		cond.wait(lk, [this] { return !data_q.empty(); });
 		std::shared_ptr<L> res{ std::make_shared<L>(std::move(data_q.front())) };

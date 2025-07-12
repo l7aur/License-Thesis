@@ -14,7 +14,6 @@ class Slice
 {
 public:
 	Slice(const std::string& path) noexcept(false);
-	Slice() {}
 	~Slice() = default;
 
 	MUST_USE_VALUE_ATTR const std::string& getFileName() const { return fileName; }

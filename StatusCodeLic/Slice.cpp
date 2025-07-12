@@ -5,7 +5,7 @@
 
 namespace {
 	inline const std::string getFileNameFromPath(const std::string& path) {
-		size_t index = path.find_last_of('/');
+		size_t index = path.find_last_of('\\');
 		return path.substr(index + 1);
 	}
 
@@ -19,7 +19,7 @@ namespace {
 		if (status.bad())
 			throw std::exception(status.text());
 
-		size_t index = spacing.find_first_of('/');
+		size_t index = spacing.find_first_of('\\');
 		double spacingX = std::atof(spacing.substr(0, index).c_str());
 		double spacingY = std::atof(spacing.substr(index + 1).c_str());
 		return { static_cast<float>(spacingX), static_cast<float>(spacingY) };
@@ -31,4 +31,5 @@ Slice::Slice(const std::string& path) :
 	img{ std::make_unique<DicomImage>(path.c_str()) },
 	pixelSpacing{ fetchPixelSpacing(path) }
 { 
+	printf("done job!\n");
 }

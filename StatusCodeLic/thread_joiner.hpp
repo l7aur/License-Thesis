@@ -5,8 +5,8 @@
 
 class thread_joiner {
 public:
-	explicit thread_joiner(std::vector<std::thread>& threads_) :
-		threads{ threads_ }
+	explicit thread_joiner(std::vector<std::thread>& threads_)
+		: threads{ threads_ }
 	{ }
 
 	~thread_joiner() {

@@ -51,7 +51,7 @@
     <ClCompile Include="Slice.cpp">
       <Filter>Source Files\PREPROCESSING</Filter>
     </ClCompile>
-    <ClCompile Include="Series.cpp">
+    <ClCompile Include="SeriesBuilder.cpp">
       <Filter>Source Files\PREPROCESSING</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,7 +59,7 @@
     <ClInclude Include="Slice.hpp">
       <Filter>Header Files\PREPROCESSING</Filter>
     </ClInclude>
-    <ClInclude Include="Series.hpp">
+    <ClInclude Include="SeriesBuilder.hpp">
       <Filter>Header Files\PREPROCESSING</Filter>
     </ClInclude>
     <ClInclude Include="thread_safe_queue.hpp">
