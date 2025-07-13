@@ -3,6 +3,9 @@
 #include <dcmtk/dcmdata/dcfilefo.h>
 #include <dcmtk/dcmdata/dctk.h>
 
+#include <filesystem>
+#include <fstream>
+
 namespace {
 	inline const std::string getFileNameFromPath(const std::string& path) {
 		size_t index = path.find_last_of('\\');
@@ -31,5 +34,16 @@ Slice::Slice(const std::string& path) :
 	img{ std::make_unique<DicomImage>(path.c_str()) },
 	pixelSpacing{ fetchPixelSpacing(path) }
 { 
-	printf("done job!\n");
+}
+
+void Slice::saveCheckpoint(const std::string& folderPath)
+{
+	// need a better solution because it takes too much time
+	const std::string checkpointFileID = folderPath + fileName + ".txt";
+	std::ofstream out{ checkpointFileID };
+	out << getNumberOfColumns() << ' ' << getNumberOfRows() << '\n'
+		<< getPixelSpacingX() << ' ' << getPixelSpacingY() << '\n';
+	for (size_t i = 0; i < getNumberOfColumns() * getNumberOfRows(); ++i)
+		out << getPixelData()[i] << '\n';
+	out.close();
 }

@@ -71,9 +71,6 @@
     <ClInclude Include="thread_safe_queue.hpp">
       <Filter>Header Files\DATA STRUCTURES</Filter>
     </ClInclude>
-    <ClInclude Include="thread_joiner.hpp">
-      <Filter>Header Files\DATA STRUCTURES</Filter>
-    </ClInclude>
     <ClInclude Include="Warnings.hpp">
       <Filter>Header Files\MESSAGES</Filter>
     </ClInclude>

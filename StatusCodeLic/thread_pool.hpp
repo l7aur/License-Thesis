@@ -1,6 +1,5 @@
 #pragma once
 
-#include "thread_joiner.hpp"
 #include "thread_safe_queue.hpp"
 #include "Warnings.hpp"
 #include <atomic>
@@ -9,9 +8,9 @@
 class thread_pool {
 public:
 	thread_pool() noexcept(false)
-		: isDone{ false }, joiner{ threads } {
-		unsigned const threadCount = std::thread::hardware_concurrency() / 2;
+		: isDone{ false } {
 		try {
+			const size_t threadCount = std::thread::hardware_concurrency() / 2;
 			for (size_t i = 0; i < threadCount; ++i)
 				threads.push_back(std::thread(&thread_pool::worker_thread, this));
 		}
@@ -30,13 +29,20 @@ public:
 		work_q.push(std::function<void()>(f));
 	}
 
-	MUST_USE_VALUE_ATTR const int getNumberOfWorkers() const { return static_cast<int>(threads.size()); }
+	virtual void waitForFinish() {
+		while (!work_q.empty());
+		isDone = true;
+
+		for (size_t i = 0; i < threads.size(); ++i)
+			if (threads.at(i).joinable())
+				threads.at(i).join();
+	}
 
 protected:
 	std::atomic_bool isDone;
 	thread_safe_queue<std::function<void()>> work_q;
 
-	virtual void worker_thread() {
+	void worker_thread() {
 		while (!isDone) {
 			std::function<void()> task;
 			if (work_q.try_pop(task)) {
@@ -50,5 +56,4 @@ protected:
 
 private:
 	std::vector<std::thread> threads;
-	thread_joiner joiner;
 };

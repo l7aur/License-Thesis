@@ -17,6 +17,9 @@ include/
 # DICOM images
 dicom_data/
 
+# Checkpoints
+StatusCodeLic/checkpoint/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
